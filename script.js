@@ -10,3 +10,10 @@ const resetButton = document.getElementById('reset');
 const clearButton = document.getElementById('clear');
 const equalsButton = document.getElementById('equals');
 const doubleZeroButton = document.getElementById('double-zero');
+// Ajouter des écouteurs d'événements aux boutons
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      addToInput(button.textContent);
+    });
+  });
+  
