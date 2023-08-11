@@ -19,3 +19,6 @@ buttons.forEach(button => {
   resetButton.addEventListener('click', () => {
     resetCalculator();
   });
+  clearButton.addEventListener('click', () => {
+    clearInput();
+  });
