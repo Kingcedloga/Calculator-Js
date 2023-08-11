@@ -22,3 +22,6 @@ buttons.forEach(button => {
   clearButton.addEventListener('click', () => {
     clearInput();
   });
+  equalsButton.addEventListener('click', () => {
+    calculateResult();
+  });
