@@ -38,3 +38,8 @@ resetCalculator = () => {
   inputElement.value = '';
   calculElement.textContent = '';
 }
+
+// Fonction pour effacer l'entrée
+clearInput = () => {
+  inputElement.value = '';
+}
