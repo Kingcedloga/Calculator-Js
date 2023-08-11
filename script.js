@@ -30,6 +30,11 @@ doubleZeroButton.addEventListener('click', () => {
     addToInput('00');
   });
   // Fonction pour ajouter du texte à l'entrée
-function addToInput(value) {
+addToInput = (value) => {
   inputElement.value += value;
+}
+// Fonction pour réinitialiser la calculatrice
+resetCalculator = () => {
+  inputElement.value = '';
+  calculElement.textContent = '';
 }
