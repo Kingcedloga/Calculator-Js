@@ -25,3 +25,7 @@ buttons.forEach(button => {
   equalsButton.addEventListener('click', () => {
     calculateResult();
   });
+  
+doubleZeroButton.addEventListener('click', () => {
+    addToInput('00');
+  });
