@@ -29,3 +29,7 @@ buttons.forEach(button => {
 doubleZeroButton.addEventListener('click', () => {
     addToInput('00');
   });
+  // Fonction pour ajouter du texte à l'entrée
+function addToInput(value) {
+  inputElement.value += value;
+}
