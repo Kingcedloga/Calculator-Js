@@ -16,4 +16,6 @@ buttons.forEach(button => {
       addToInput(button.textContent);
     });
   });
-  
+  resetButton.addEventListener('click', () => {
+    resetCalculator();
+  });
