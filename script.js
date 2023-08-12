@@ -1,4 +1,4 @@
-// { calculate } import './calculator';
+import { calculate } from "./calculator.js";
 
 // TODO: Faire la manipulation du DOM dans ce fichier
 
@@ -42,4 +42,20 @@ resetCalculator = () => {
 // Fonction pour effacer l'entrée
 clearInput = () => {
   inputElement.value = '';
+}
+// Fonction pour calculer le résultat
+function calculateResult() {
+  const input = inputElement.value;
+  const calculation = calculElement.textContent + ' ' + input;
+
+  // Vérifier si l'entrée est une opération valide
+  if (isValidOperation(input)) {
+    const result = eval(calculation);
+    inputElement.value = result;
+    calculElement.textContent = calculation + ' =';
+  } else {
+    inputElement.value = '';
+    calculElement.textContent = '';
+    alert('Opération invalide !');
+  }
 }
