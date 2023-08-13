@@ -33,16 +33,16 @@ doubleZeroButton.addEventListener('click', () => {
 function addToInput(value) {
   inputElement.value += value;
 }
-// Vérifier si le point est déjà présent dans l'entrée
-if (value === '.' && inputElement.value.includes('.')) {
-  return;
-}
-// Vérifier si l'entrée commence par zéro
-if (inputElement.value === '0' && value !== '.') {
-  inputElement.value = value;
-} else {
-  inputElement.value += value;
-}
+// // Vérifier si le point est déjà présent dans l'entrée
+// if (value === '.' && inputElement.value.includes('.')) {
+//   return;
+// }
+// // Vérifier si l'entrée commence par zéro
+// if (inputElement.value === '0' && value !== '.') {
+//   inputElement.value = value;
+// } else {
+//   inputElement.value += value;
+// }
 // Fonction pour réinitialiser la calculatrice
 function resetCalculator ()  {
   inputElement.value = '';
@@ -56,8 +56,11 @@ function clearInput () {
 // Fonction pour calculer le résultat
 function calculateResult() {
   const input = inputElement.value;
-  const calculation = calculElement.textContent + ' ' + input;
-
+  var calculation = calculElement.textContent + ' ' + input;
+  // Vérifier si l'opération se termine par un point
+  if (input.endsWith('.')) {
+    calculation += '0';
+  }
   // Vérifier si l'entrée est une opération valide
   if (isValidOperation(input)) {
     const result = eval(calculation);
