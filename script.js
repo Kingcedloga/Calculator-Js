@@ -37,6 +37,12 @@ function addToInput(value) {
 if (value === '.' && inputElement.value.includes('.')) {
   return;
 }
+// Vérifier si l'entrée commence par zéro
+if (inputElement.value === '0' && value !== '.') {
+  inputElement.value = value;
+} else {
+  inputElement.value += value;
+}
 // Fonction pour réinitialiser la calculatrice
 function resetCalculator ()  {
   inputElement.value = '';
