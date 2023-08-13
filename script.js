@@ -30,17 +30,17 @@ doubleZeroButton.addEventListener('click', () => {
     addToInput('00');
   });
   // Fonction pour ajouter du texte à l'entrée
-addToInput = (value) => {
+function addToInput(value) {
   inputElement.value += value;
 }
 // Fonction pour réinitialiser la calculatrice
-resetCalculator = () => {
+function resetCalculator ()  {
   inputElement.value = '';
   calculElement.textContent = '';
 }
 
 // Fonction pour effacer l'entrée
-clearInput = () => {
+function clearInput () {
   inputElement.value = '';
 }
 // Fonction pour calculer le résultat
@@ -58,4 +58,9 @@ function calculateResult() {
     calculElement.textContent = '';
     alert('Opération invalide !');
   }
+}
+// Fonction pour vérifier si l'opération est valide
+function isValidOperation(input) {
+const regex = /^\s*-?\d+(\.\d+)?\s*([-+*/]\s*-?\d+(\.\d+)?\s*)*$/;
+return regex.test(input);
 }
