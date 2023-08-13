@@ -77,7 +77,7 @@ function calculateResult() {
 
   // Vérifier si l'opération est valide
   if (isValidOperation(calculation)) {
-    let result = calculate(calculation);
+    let result = eval(calculation);
 
     // Gérer le pourcentage
     if (calculElement.textContent === '') {
