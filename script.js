@@ -34,7 +34,7 @@ doubleZeroButton.addEventListener('click', () => {
   addToInput('00');
 });
 
-// Fonction pour ajouter du texte à l'entrée
+  // Fonction pour ajouter du texte à l'entrée
 function addToInput(value) {
   // Vérifier si le point est déjà présent dans l'entrée
   if (value === '.' && inputElement.value.includes('.')) {
@@ -47,6 +47,11 @@ function addToInput(value) {
   } else {
     inputElement.value += value;
   }
+
+  // Mettre à jour la chaîne de calcul
+  const currentCalculation = calculElement.textContent.trim();
+  const updatedCalculation = currentCalculation + ' ' + value;
+  calculElement.textContent = updatedCalculation;
 }
 
 // Fonction pour réinitialiser la calculatrice
