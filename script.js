@@ -33,6 +33,10 @@ doubleZeroButton.addEventListener('click', () => {
 function addToInput(value) {
   inputElement.value += value;
 }
+// Vérifier si le point est déjà présent dans l'entrée
+if (value === '.' && inputElement.value.includes('.')) {
+  return;
+}
 // Fonction pour réinitialiser la calculatrice
 function resetCalculator ()  {
   inputElement.value = '';
