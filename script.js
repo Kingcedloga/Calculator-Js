@@ -27,14 +27,17 @@ plus.addEventListener('click', (e) => {
   addToInput('+');
   e.preventDefault();
 });  
-minus.addEventListener('click', () => {
+minus.addEventListener('click', (e) => {
   addToInput('-');
+  e.preventDefault();
 }); 
-times.addEventListener('click', () => {
+times.addEventListener('click', (e) => {
   addToInput('*');
+  e.preventDefault();
 });
-divideby.addEventListener('click', () => {
+divideby.addEventListener('click', (e) => {
   addToInput('/');
+  e.preventDefault();
 });
 
 resetButton.addEventListener('click', () => {
