@@ -10,12 +10,31 @@ const resetButton = document.getElementById('reset');
 const clearButton = document.getElementById('clear');
 const equalsButton = document.getElementById('equals');
 const doubleZeroButton = document.getElementById('double-zero');
+const plus = document.getElementById ('plus');
+const minus = document.getElementById ('minus');
+const times = document.getElementById ('times');
+const divideby = document.getElementById ('divideby');
+
 
 // Ajouter des écouteurs d'événements aux boutons
 buttons.forEach(button => {
   button.addEventListener('click', () => {
     addToInput(button.textContent);
   });
+});
+
+plus.addEventListener('click', (e) => {
+  addToInput('+');
+  e.preventDefault();
+});  
+minus.addEventListener('click', () => {
+  addToInput('-');
+}); 
+times.addEventListener('click', () => {
+  addToInput('*');
+});
+divideby.addEventListener('click', () => {
+  addToInput('/');
 });
 
 resetButton.addEventListener('click', () => {
@@ -77,12 +96,13 @@ function calculateResult() {
 
   // Vérifier si l'opération est valide
   if (isValidOperation(calculation)) {
-    let result = eval(calculation);
+    let result = calculate(calculation);
 
     // Gérer le pourcentage
     if (calculElement.textContent === '') {
       result /= 100;
     }
+    
 
     inputElement.value = result;
     calculElement.textContent = calculation + ' =';
