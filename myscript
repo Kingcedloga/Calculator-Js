@@ -1,0 +1,75 @@
+// Fonction pour calculer le résultat
+function calculateResult() {
+    const input = inputElement.value;
+    let calculation = calculElement.textContent + ' ' + input;
+  
+    // Vérifier si l'opération se termine par un point
+    if (input.endsWith('.')) {
+      calculation += '0';
+    }
+  
+    // Vérifier si l'opération est valide
+    if (isValidOperation(calculation)) {
+      let result = calculate(calculation);
+  
+      // Gérer le pourcentage
+      if (calculElement.textContent === '%') {
+        result /= 100;
+      }
+      
+  
+      inputElement.value = result;
+      calculElement.textContent = calculation + ' =';
+    } else {
+      inputElement.value = '';
+      calculElement.textContent = '';
+      alert('Opération invalide !');
+    }
+  }
+
+
+    // Fonction pour ajouter du texte à l'entrée
+function addToInput(value) {
+    // Vérifier si le point est déjà présent dans l'entrée
+    // if (value === '.' && inputElement.value.includes('.')) {
+    //   return;
+    // }
+  
+    // Vérifier si l'entrée commence par zéro
+    if (inputElement.value === '0' && value !== '.') {
+      inputElement.value = value;
+    } else {
+      inputElement.value += value;
+    }
+  
+    // Mettre à jour la chaîne de calcul
+    const currentCalculation = calculElement.textContent.trim();
+    const updatedCalculation = currentCalculation + ' ' + value;
+    calculElement.textContent = updatedCalculation;
+  }
+
+
+  // Fonction pour vérifier si l'opération est valide
+function isValidOperation(input) {
+const regex = /^\s*-?\d+(\.\d+)?\s*([-+*/]\s*-?\d+(\.\d+)?\s*)*$/;
+return regex.test(input);
+}
+
+
+// Fonction pour ajouter un opérateur à l'entrée
+function addOperatorToInput(operator) {
+    if (inputField.value === "") {
+      return;
+    }
+    inputField.value += ` ${operator} `;
+  }
+  // Fonction pour effectuer le calcu
+  function performCalculation() {
+    if (inputField.value === "") {
+      return;
+    }
+    calculationLabel.innerText = inputField.value + " =";
+    inputField.value = eval(inputField.value);
+  }
+
+
