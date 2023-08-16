@@ -1,4 +1,4 @@
-import { calculate } from "./calculator.js";
+// import { calculate } from "./calculator.js";
 
 // TODO: Faire la manipulation du DOM dans ce fichier
 
@@ -24,7 +24,7 @@ function cleanExpression(expression) {
     .replace(/%/g, " / 100");
 }
 
-/***********evaluer les expressions mathematiques************ */
+/***********evaluer les expressions mathematiques*************/
 function calculate(expression) {
   try {
     return eval(cleanExpression(expression));
@@ -33,5 +33,18 @@ function calculate(expression) {
     clearResult();
     inputElement.textContent = "";
     console.log(error);
+  }
+}
+
+/***********gerer les cliques du button egal*************/
+function equalsClick(inputElement, userInput) {
+  if (!result) {
+    if (userInput.value) {
+      inputElement.textContent = `${inputElement.textContent} ${userInput.value}`;
+      result = calculate(inputElement.textContent);
+      userInput.value = result;
+    }
+  } else {
+    inputElement.textContent = result;
   }
 }
