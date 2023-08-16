@@ -12,3 +12,14 @@ const minusSign = "-";
 const equalsSign = "=";
 const plusMinusSign = "+/-";
 let result;
+
+/***********conversion des symboles************ */
+function cleanExpression(expression) {
+  return expression
+    .replace(/÷/g, "/")
+    .replace(/×/g, "*")
+    .replace(/x/g, "*")
+    .replace(/X/g, "*")
+    .replace(/\s/g, "")
+    .replace(/%/g, " / 100");
+}
