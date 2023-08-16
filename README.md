@@ -51,3 +51,15 @@
 * inputElement.textContent = result; : Si la variable result est déjà définie (c'est-à-dire qu'un calcul précédent a été effectué), cette ligne met à jour le contenu texte de inputElement avec la valeur de result. Cela permet d'afficher le résultat sans effectuer de nouveaux calculs.
 
 * En résumé, la fonction equalsClick() est appelée lorsque le bouton "equals" est cliqué. Elle extrait la valeur du champ de saisie userInput et l'ajoute à l'expression mathématique en cours de construction. Ensuite, elle appelle la fonction calculate() pour évaluer l'expression et stocke le résultat dans la variable result. Si un calcul précédent a déjà été effectué, la fonction affiche simplement le résultat précédent sans effectuer de nouveaux calculs.
+
+## les cliques du button pourcentage
+
+* if (userInput.value) { ... } : Cette condition vérifie si la valeur de userInput (probablement un champ de saisie) n'est pas vide. Si le champ de saisie n'est pas vide, le code à l'intérieur du bloc if est exécuté.
+
+* inputElement.textContent = ${inputElement.textContent} ${userInput.value} %; : Cette ligne ajoute la valeur de userInput suivie d'un pourcentage à la fin du contenu texte de inputElement. Il semble que inputElement stocke l'expression mathématique en cours de construction.
+
+* result = userInput.value / 100; : Cette ligne calcule le pourcentage correspondant à la valeur saisie par l'utilisateur. Elle divise la valeur de userInput par 100 et stocke le résultat dans la variable result.
+
+* userInput.value = result; : Cette ligne met à jour la valeur de userInput avec le résultat du calcul précédent. Cela permet de remplacer la valeur saisie par l'utilisateur par le résultat du pourcentage calculé.
+
+* En résumé, la fonction PercentageClick() est appelée lorsque le bouton "percentage" est cliqué. Elle récupère la valeur du champ de saisie userInput, ajoute cette valeur suivie d'un pourcentage à l'expression mathématique en cours de construction, puis calcule le pourcentage correspondant et met à jour la valeur du champ de saisie avec le résultat.

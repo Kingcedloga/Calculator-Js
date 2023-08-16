@@ -36,7 +36,7 @@ function calculate(expression) {
   }
 }
 
-/***********gerer les cliques du button egal*************/
+/***********les cliques du button egal*************/
 function equalsClick(inputElement, userInput) {
   if (!result) {
     if (userInput.value) {
@@ -46,5 +46,14 @@ function equalsClick(inputElement, userInput) {
     }
   } else {
     inputElement.textContent = result;
+  }
+}
+
+/***********les cliques du button pourcentage*************/
+function PercentageClick(userInput, inputElement) {
+  if (userInput.value) {
+    inputElement.textContent = `${inputElement.textContent} ${userInput.value} %`;
+    result = userInput.value / 100;
+    userInput.value = result;
   }
 }
