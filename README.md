@@ -82,3 +82,9 @@ Si le champ de saisie est vide et l'opérateur est le signe moins ("minusSign") 
 
 * minusClick(userInput); : Cette ligne appelle la fonction minusClick() pour mettre à jour la valeur du champ de saisie userInput avec le signe moins ("-"). Cela permet d'indiquer que l'utilisateur souhaite effectuer une opération de soustraction.
 * En résumé, la fonction otherOperatorsClick() est appelée lorsque l'un des boutons d'opérateurs est cliqué, à l'exception du bouton "minus". Si le champ de saisie userInput n'est pas vide, elle construit une nouvelle expression en fonction de l'état de la variable result, met à jour le contenu texte de inputElement avec la nouvelle expression, réinitialise la variable result et réinitialise la valeur du champ de saisie userInput. Si le champ de saisie est vide et l'opérateur est le signe moins, la fonction appelle la fonction minusClick() pour mettre à jour la valeur du champ de saisie avec le signe moins.
+
+## les cliques du button reset
+
+* form.reset(); : Cette ligne réinitialise les valeurs des champs de saisie et des autres éléments de formulaire à leurs valeurs par défaut. Elle rétablit les valeurs initiales des éléments du formulaire, ce qui peut inclure la suppression des données saisies par l'utilisateur.
+
+* En résumé, la fonction resetClick() est appelée lorsque le bouton de réinitialisation est cliqué. Elle supprime le contenu de l'élément inputElement en le vidant complètement, puis réinitialise les valeurs des champs de saisie et des autres éléments du formulaire à leurs valeurs par défaut à l'aide de la méthode form.reset(). Cela permet de réinitialiser le formulaire à son état initial.

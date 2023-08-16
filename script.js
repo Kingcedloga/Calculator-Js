@@ -78,3 +78,9 @@ function otherOperatorsClick(operator, userInput, inputElement) {
     }
   }
 }
+
+/***********les cliques du button reset*************/
+function resetClick(form) {
+  // inputElement.innerHTML = "";
+  form.reset();
+}
