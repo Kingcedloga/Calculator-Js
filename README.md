@@ -88,3 +88,15 @@ Si le champ de saisie est vide et l'opérateur est le signe moins ("minusSign") 
 * form.reset(); : Cette ligne réinitialise les valeurs des champs de saisie et des autres éléments de formulaire à leurs valeurs par défaut. Elle rétablit les valeurs initiales des éléments du formulaire, ce qui peut inclure la suppression des données saisies par l'utilisateur.
 
 * En résumé, la fonction resetClick() est appelée lorsque le bouton de réinitialisation est cliqué. Elle supprime le contenu de l'élément inputElement en le vidant complètement, puis réinitialise les valeurs des champs de saisie et des autres éléments du formulaire à leurs valeurs par défaut à l'aide de la méthode form.reset(). Cela permet de réinitialiser le formulaire à son état initial.
+
+## les cliques des buttons
+
+* if (textContent === plusMinusSign) { ... } else { ... } : Cette structure conditionnelle vérifie si la valeur de textContent est égale à plusMinusSign. plusMinusSign semble être une variable contenant un signe plus ou moins ("±"). Si la condition est vraie, le code à l'intérieur du premier bloc if est exécuté. Sinon, le code à l'intérieur du bloc else est exécuté.
+
+* Si textContent est égal à plusMinusSign :
+
+userInput.value = +userInput.value * -1; : Cette ligne convertit la valeur du champ de saisie userInput en nombre en utilisant l'opérateur unaire +. Elle multiplie ensuite le nombre par -1 pour inverser son signe. Cela permet d'effectuer un changement de signe sur la valeur saisie par l'utilisateur.
+Sinon :
+
+* userInput.value = ${userInput.value}${textContent}; : Cette ligne ajoute la valeur de textContent à la fin de la valeur actuelle du champ de saisie userInput. Cela permet de concaténer le texte de textContent à la valeur existante du champ de saisie.
+En résumé, la fonction buttonClick() est appelée lorsque l'un des boutons est cliqué. Si le texte du bouton correspond à plusMinusSign, la fonction inverse le signe de la valeur saisie par l'utilisateur en la multipliant par -1. Sinon, le texte du bouton est ajouté à la fin de la valeur existante du champ de saisie. Cela permet d'ajouter des chiffres et d'autres symboles au champ de saisie lorsqu'un bouton est cliqué.

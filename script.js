@@ -84,3 +84,12 @@ function resetClick(form) {
   // inputElement.innerHTML = "";
   form.reset();
 }
+
+/***********les cliques des buttons*************/
+function buttonClick(textContent, userInput) {
+  if (textContent === plusMinusSign) {
+    userInput.value = +userInput.value * -1;
+  } else {
+    userInput.value = `${userInput.value}${textContent}`;
+  }
+}
