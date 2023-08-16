@@ -57,3 +57,8 @@ function PercentageClick(userInput, inputElement) {
     userInput.value = result;
   }
 }
+
+/***********les cliques du minus*************/
+function minusClick(userInput) {
+  userInput.value = minusSign;
+}

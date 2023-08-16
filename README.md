@@ -36,7 +36,7 @@
 
 * console.log(error); : Cette ligne affiche l'erreur capturée dans la console du navigateur. Cela peut être utile pour le débogage et le suivi des erreurs.
 
-## gerer les cliques du button egal
+## les cliques du button egal
 
 * if (!result) { ... } else { ... } : Cette structure conditionnelle vérifie si la variable result est définie ou non. Si result n'est pas défini (c'est-à-dire qu'il est null, undefined ou évalué à false), le code à l'intérieur du premier bloc if est exécuté. Sinon, le code à l'intérieur du bloc else est exécuté.
 
