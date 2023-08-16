@@ -23,3 +23,15 @@ function cleanExpression(expression) {
     .replace(/\s/g, "")
     .replace(/%/g, " / 100");
 }
+
+/***********evaluer les expressions mathematiques************ */
+function calculate(expression) {
+  try {
+    return eval(cleanExpression(expression));
+  } catch (error) {
+    form.reset();
+    clearResult();
+    inputElement.textContent = "";
+    console.log(error);
+  }
+}
