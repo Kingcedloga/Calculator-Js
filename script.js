@@ -93,3 +93,7 @@ function buttonClick(textContent, userInput) {
     userInput.value = `${userInput.value}${textContent}`;
   }
 }
+
+/***********initialisations*************/
+inputElement.textContent = "";
+userInput.value = "0";

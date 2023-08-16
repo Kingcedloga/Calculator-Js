@@ -100,3 +100,7 @@ Sinon :
 
 * userInput.value = ${userInput.value}${textContent}; : Cette ligne ajoute la valeur de textContent à la fin de la valeur actuelle du champ de saisie userInput. Cela permet de concaténer le texte de textContent à la valeur existante du champ de saisie.
 En résumé, la fonction buttonClick() est appelée lorsque l'un des boutons est cliqué. Si le texte du bouton correspond à plusMinusSign, la fonction inverse le signe de la valeur saisie par l'utilisateur en la multipliant par -1. Sinon, le texte du bouton est ajouté à la fin de la valeur existante du champ de saisie. Cela permet d'ajouter des chiffres et d'autres symboles au champ de saisie lorsqu'un bouton est cliqué.
+
+## initialisations 
+
+* initialisations de l'écran
