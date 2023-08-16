@@ -62,3 +62,19 @@ function PercentageClick(userInput, inputElement) {
 function minusClick(userInput) {
   userInput.value = minusSign;
 }
+
+/***********les cliques des autres operateurs*************/
+function otherOperatorsClick(operator, userInput, inputElement) {
+  if (userInput.value) {
+    const expression = result
+      ? `${inputElement.textContent} ${operator}`
+      : `${inputElement.textContent} ${userInput.value} ${operator}`;
+    result = result && undefined;
+    inputElement.textContent = expression;
+    userInput.value = "";
+  } else {
+    if (operator === minusSign) {
+      minusClick(userInput);
+    }
+  }
+}

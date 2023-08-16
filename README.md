@@ -63,3 +63,22 @@
 * userInput.value = result; : Cette ligne met à jour la valeur de userInput avec le résultat du calcul précédent. Cela permet de remplacer la valeur saisie par l'utilisateur par le résultat du pourcentage calculé.
 
 * En résumé, la fonction PercentageClick() est appelée lorsque le bouton "percentage" est cliqué. Elle récupère la valeur du champ de saisie userInput, ajoute cette valeur suivie d'un pourcentage à l'expression mathématique en cours de construction, puis calcule le pourcentage correspondant et met à jour la valeur du champ de saisie avec le résultat.
+
+## les cliques du minus
+
+* userInput.value = minusSign; : Cette ligne attribue la valeur de la variable minusSign (qui semble être le signe moins "-") à la propriété value de l'élément userInput. Cela remplace la valeur actuelle du champ de saisie userInput par le signe moins.
+* En résumé, la fonction minusClick() est appelée lorsque le bouton "minus" est cliqué. Elle met à jour la valeur du champ de saisie userInput avec le signe moins ("-"). Cela peut être utilisé pour indiquer que l'utilisateur souhaite effectuer une opération de soustraction.
+
+## les cliques des autres operateurs
+* if (userInput.value) { ... } else { ... } : Cette structure conditionnelle vérifie si la valeur de userInput (probablement un champ de saisie) est vide ou non. Si le champ de saisie n'est pas vide, le code à l'intérieur du premier bloc if est exécuté. Sinon, le code à l'intérieur du bloc else est exécuté.
+
+* Si le champ de saisie n'est pas vide :
+
+* const expression = result ? ... : ...; : Cette ligne construit une expression en fonction de l'état de la variable result. Si result est définie (c'est-à-dire qu'un calcul précédent a été effectué), l'expression est construite en ajoutant l'opérateur operator à la fin de l'expression actuelle dans inputElement.textContent. Sinon, l'expression est construite en ajoutant la valeur de userInput suivie de l'opérateur operator à la fin de l'expression actuelle dans inputElement.textContent.
+result = result && undefined; : Cette ligne réinitialise la variable result en la définissant sur undefined. Cela permet de réinitialiser le résultat précédent et de s'assurer que le calcul sera effectué avec la nouvelle expression construite.
+inputElement.textContent = expression; : Cette ligne met à jour le contenu texte de inputElement avec la nouvelle expression construite.
+userInput.value = ""; : Cette ligne réinitialise la valeur du champ de saisie userInput en la définissant sur une chaîne vide.
+Si le champ de saisie est vide et l'opérateur est le signe moins ("minusSign") :
+
+* minusClick(userInput); : Cette ligne appelle la fonction minusClick() pour mettre à jour la valeur du champ de saisie userInput avec le signe moins ("-"). Cela permet d'indiquer que l'utilisateur souhaite effectuer une opération de soustraction.
+* En résumé, la fonction otherOperatorsClick() est appelée lorsque l'un des boutons d'opérateurs est cliqué, à l'exception du bouton "minus". Si le champ de saisie userInput n'est pas vide, elle construit une nouvelle expression en fonction de l'état de la variable result, met à jour le contenu texte de inputElement avec la nouvelle expression, réinitialise la variable result et réinitialise la valeur du champ de saisie userInput. Si le champ de saisie est vide et l'opérateur est le signe moins, la fonction appelle la fonction minusClick() pour mettre à jour la valeur du champ de saisie avec le signe moins.
