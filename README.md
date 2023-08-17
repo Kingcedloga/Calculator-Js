@@ -137,3 +137,28 @@ Sinon :
 * default: break; : Si le type du bouton ne correspond à aucun des cas précédents, aucune action supplémentaire n'est effectuée.
 
 * En résumé, le code ajoute des écouteurs d'événements de clic aux boutons. Lorsqu'un bouton est cliqué, la fonction appropriée est appelée en fonction de son type. Si le bouton est de type "submit", la fonction submitClick() est appelée. Si le bouton est de type "reset", la fonction resetClick() est appelée. Si le bouton est de type "button", la fonction buttonClick() est appelée. Les fonctions correspondantes effectueront les actions appropriées en fonction du texte ou du contenu du bouton cliqué et des éléments associés tels que userInput, inputElement et form.
+
+## ecouteur d'evenement  userInput
+
+* Cette partie de code attache un écouteur d'événement d'entrée (input) à l'élément userInput, qui semble être un champ de saisie de l'utilisateur. Voici ce que fait le code en détail :
+
+* userInput.addEventListener("input", function() { ... }) : Cela ajoute un écouteur d'événement d'entrée à l'élément userInput, de sorte que lorsque l'utilisateur saisit ou modifie le contenu du champ de saisie, la fonction anonyme est exécutée.
+
+* this.value = this.value.match(/[0-9.]*/)[0]; : À l'intérieur de la fonction, cette ligne applique une expression régulière pour filtrer et modifier la valeur du champ de saisie.
+
+* this.value représente la valeur actuelle du champ de saisie.
+.match(/[0-9.]*/) effectue une correspondance de la valeur avec l'expression régulière [0-9.]*, qui recherche une séquence de chiffres (0-9) et de points (.) de longueur variable (*) dans la valeur du champ de saisie.
+[0] récupère le premier élément correspondant trouvé.
+En d'autres termes, cette ligne supprime tous les caractères non numériques ou non des points de la valeur du champ de saisie, ne laissant que les chiffres et les points décimaux.
+
+* En résumé, lorsque l'utilisateur saisit ou modifie le contenu du champ de saisie userInput, le code filtre et modifie la valeur du champ en supprimant tous les caractères non numériques ou non des points. Cela permet de s'assurer que la valeur du champ de saisie ne contient que des chiffres et des points décimaux.
+
+## ecouteur d'evenement  form (submit)
+
+* Cette ligne code attache un écouteur d'événement de soumission (submit) au formulaire représenté par l'élément form. Voici ce que fait le code en détail :
+
+* form.addEventListener("submit", function(event) { ... }) : Cela ajoute un écouteur d'événement de soumission au formulaire, de sorte que lorsque l'utilisateur soumet le formulaire en cliquant sur un bouton de soumission ou en appuyant sur la touche Entrée, la fonction anonyme est exécutée.
+
+* event.preventDefault(); : À l'intérieur de la fonction, cette ligne empêche le comportement par défaut de la soumission du formulaire. Cela signifie que lorsque l'événement de soumission se produit, la page ne sera pas actualisée ou rechargée comme elle le ferait normalement lorsqu'un formulaire est soumis.
+
+* En résumé, lorsque l'utilisateur soumet le formulaire, le code empêche le comportement par défaut de la soumission du formulaire, ce qui évite le rechargement ou l'actualisation de la page. Cela peut être utilisé pour effectuer des opérations personnalisées ou des validations supplémentaires avant de soumettre le formulaire ou pour gérer la soumission du formulaire via JavaScript plutôt que de laisser le comportement par défaut du navigateur s'exécuter.

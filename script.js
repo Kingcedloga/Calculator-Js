@@ -127,3 +127,13 @@ buttons.forEach(function(button) {
     }
   });
 });
+
+/**********ecouteur d'evenement  userInput*************/
+userInput.addEventListener("input", function() {
+  this.value = this.value.match(/[0-9.]*/)[0];
+});
+
+/**********ecouteur d'evenement  form*************/
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+});
