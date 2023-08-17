@@ -13,6 +13,7 @@ const equalsSign = "=";
 const plusMinusSign = "+/-";
 let result;
 
+
 /***********conversion des symboles************ */
 function cleanExpression(expression) {
   return expression
@@ -81,7 +82,7 @@ function otherOperatorsClick(operator, userInput, inputElement) {
 
 /***********les cliques du button reset*************/
 function resetClick(form) {
-  // inputElement.innerHTML = "";
+  inputElement.innerHTML = "";
   form.reset();
 }
 
@@ -142,3 +143,7 @@ form.addEventListener("submit", function(event) {
 form.addEventListener("reset", function() {
   clearResult();
 });
+
+function clearResult() {
+  result = eval();
+}
