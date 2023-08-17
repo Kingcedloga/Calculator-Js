@@ -104,3 +104,36 @@ En résumé, la fonction buttonClick() est appelée lorsque l'un des boutons est
 ## initialisations 
 
 * initialisations de l'écran
+
+##
+
+* if (textContent === equalsSign) { ... } else if (textContent === percentageSign) { ... } else { ... } : Cette structure conditionnelle vérifie si la valeur de textContent correspond à equalsSign, percentageSign ou à une autre valeur. equalsSign et percentageSign semblent être des variables représentant respectivement le signe égal "=" et le signe pourcentage "%". Selon la valeur de textContent, le code à l'intérieur du bloc correspondant sera exécuté.
+
+* Si textContent correspond à equalsSign :
+
+* equalsClick(inputElement, userInput); : Cette ligne appelle la fonction equalsClick() en lui passant les arguments inputElement et userInput. Cela semble indiquer que le bouton cliqué est le bouton égal ("=") et que la fonction equalsClick() sera responsable de l'exécution du calcul final.
+Sinon, si textContent correspond à percentageSign :
+
+* PercentageClick(userInput, inputElement); : Cette ligne appelle la fonction PercentageClick() en lui passant les arguments userInput et inputElement. Cela semble indiquer que le bouton cliqué est le bouton pourcentage ("%") et que la fonction PercentageClick() sera responsable du calcul du pourcentage.
+Sinon :
+
+* otherOperatorsClick(textContent, userInput, inputElement); : Cette ligne appelle la fonction otherOperatorsClick() en lui passant les arguments textContent, userInput et inputElement. Cela semble indiquer que le bouton cliqué correspond à un autre opérateur (comme l'addition, la soustraction, la multiplication, etc.) et que la fonction otherOperatorsClick() sera responsable de la gestion de cet opérateur.
+* En résumé, la fonction submitClick() est appelée lorsque l'un des boutons est cliqué. Selon le texte du bouton cliqué, la fonction appelle d'autres fonctions spécifiques pour gérer les différentes actions. Si le bouton correspond au bouton égal ("="), la fonction equalsClick() est appelée. Si le bouton correspond au bouton pourcentage ("%"), la fonction PercentageClick() est appelée. Sinon, la fonction otherOperatorsClick() est appelée pour gérer l'opérateur spécifique correspondant au bouton cliqué.
+
+## ecouteur d'evenement aux buttons
+
+* buttons.forEach(function(button) { ... }) : Cette boucle itère sur chaque élément button dans le tableau buttons.
+
+* button.addEventListener("click", function() { ... }) : Cela ajoute un écouteur d'événements de clic à chaque bouton, de sorte que lorsque l'utilisateur clique sur un bouton, la fonction anonyme est exécutée.
+
+* switch (this.type) { ... } : Cette structure switch examine le type du bouton sur lequel l'événement de clic a été déclenché, représenté par this.type.
+
+* case "submit": submitClick(this.textContent); break; : Si le type du bouton est "submit" (un bouton de soumission), la fonction submitClick() est appelée en passant le texte du contenu du bouton (this.textContent) en tant qu'argument.
+
+*bcase "reset": resetClick(inputElement, form); break; : Si le type du bouton est "reset" (un bouton de réinitialisation), la fonction resetClick() est appelée en passant inputElement et form en tant qu'arguments.
+
+* case "button": buttonClick(this.textContent, userInput); break; : Si le type du bouton est "button" (un bouton normal), la fonction buttonClick() est appelée en passant le texte du contenu du bouton (this.textContent) et userInput en tant qu'arguments.
+
+* default: break; : Si le type du bouton ne correspond à aucun des cas précédents, aucune action supplémentaire n'est effectuée.
+
+* En résumé, le code ajoute des écouteurs d'événements de clic aux boutons. Lorsqu'un bouton est cliqué, la fonction appropriée est appelée en fonction de son type. Si le bouton est de type "submit", la fonction submitClick() est appelée. Si le bouton est de type "reset", la fonction resetClick() est appelée. Si le bouton est de type "button", la fonction buttonClick() est appelée. Les fonctions correspondantes effectueront les actions appropriées en fonction du texte ou du contenu du bouton cliqué et des éléments associés tels que userInput, inputElement et form.

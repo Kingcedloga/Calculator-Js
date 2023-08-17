@@ -97,3 +97,33 @@ function buttonClick(textContent, userInput) {
 /***********initialisations*************/
 inputElement.textContent = "";
 userInput.value = "0";
+
+/***********les cliques des buttons*************/
+function submitClick(textContent) {
+  if (textContent === equalsSign) {
+    equalsClick(inputElement, userInput);
+  } else if (textContent === percentageSign) {
+    PercentageClick(userInput, inputElement);
+  } else {
+    otherOperatorsClick(textContent, userInput, inputElement);
+  }
+}
+
+/**********ecouteur d'evenement aux buttons*************/
+buttons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    switch (this.type) {
+      case "submit":
+        submitClick(this.textContent);
+        break;
+      case "reset":
+        resetClick(inputElement, form);
+        break;
+      case "button":
+        buttonClick(this.textContent, userInput);
+        break;
+      default:
+        break;
+    }
+  });
+});
