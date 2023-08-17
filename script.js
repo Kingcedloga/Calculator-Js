@@ -148,6 +148,8 @@ form.addEventListener("reset", function() {
   clearResult();
 });
 
+/**********************calcul****************************** */
+
 function clearResult() {
   result = eval();
 }
