@@ -133,7 +133,12 @@ userInput.addEventListener("input", function() {
   this.value = this.value.match(/[0-9.]*/)[0];
 });
 
-/**********ecouteur d'evenement  form*************/
+/**********ecouteur d'evenement  form(submit)*************/
 form.addEventListener("submit", function(event) {
   event.preventDefault();
+});
+
+/**********ecouteur d'evenement  form (reset)*************/
+form.addEventListener("reset", function() {
+  clearResult();
 });

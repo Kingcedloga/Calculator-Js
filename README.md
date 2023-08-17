@@ -162,3 +162,12 @@ En d'autres termes, cette ligne supprime tous les caractères non numériques ou
 * event.preventDefault(); : À l'intérieur de la fonction, cette ligne empêche le comportement par défaut de la soumission du formulaire. Cela signifie que lorsque l'événement de soumission se produit, la page ne sera pas actualisée ou rechargée comme elle le ferait normalement lorsqu'un formulaire est soumis.
 
 * En résumé, lorsque l'utilisateur soumet le formulaire, le code empêche le comportement par défaut de la soumission du formulaire, ce qui évite le rechargement ou l'actualisation de la page. Cela peut être utilisé pour effectuer des opérations personnalisées ou des validations supplémentaires avant de soumettre le formulaire ou pour gérer la soumission du formulaire via JavaScript plutôt que de laisser le comportement par défaut du navigateur s'exécuter.
+
+## ecouteur d'evenement  form (reset)
+* Ce code attache un écouteur d'événement de réinitialisation (reset) au formulaire représenté par l'élément form. Voici ce que fait le code en détail :
+
+* form.addEventListener("reset", function() { ... }) : Cela ajoute un écouteur d'événement de réinitialisation au formulaire, de sorte que lorsque l'utilisateur effectue une action de réinitialisation du formulaire (par exemple, en cliquant sur un bouton de réinitialisation), la fonction anonyme est exécutée.
+
+* clearResult(); : À l'intérieur de la fonction, cette ligne appelle la fonction clearResult(). Cela suggère que la fonction clearResult() est responsable de la suppression ou de la réinitialisation des résultats ou des données liées au formulaire.
+
+* En résumé, lorsque l'utilisateur effectue une action de réinitialisation du formulaire, le code exécute la fonction clearResult(), qui est chargée de supprimer ou de réinitialiser les résultats ou les données associées au formulaire. Cela permet de mettre à zéro les champs de saisie, de réinitialiser les états ou les valeurs, ou d'effectuer d'autres actions nécessaires lors de la réinitialisation du formulaire.
