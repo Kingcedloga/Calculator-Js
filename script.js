@@ -11,8 +11,12 @@ const percentageSign = "%";
 const minusSign = "-";
 const equalsSign = "=";
 const plusMinusSign = "+/-";
+const resetButton = document.querySelector('button.secondary');
 let result;
 
+/**********************************************/
+userInput.setAttribute('placeholder', '0');
+resetButton.setAttribute('type', 'reset');
 
 /***********conversion des symboles************ */
 function cleanExpression(expression) {
@@ -97,7 +101,7 @@ function buttonClick(textContent, userInput) {
 
 /***********initialisations*************/
 inputElement.textContent = "";
-userInput.value = "0";
+userInput.value = "";
 
 /***********les cliques des buttons*************/
 function submitClick(textContent) {
