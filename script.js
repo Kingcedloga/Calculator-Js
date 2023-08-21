@@ -115,20 +115,15 @@ function submitClick(textContent) {
 }
 
 /**********ecouteur d'evenement aux buttons*************/
+
 buttons.forEach(function(button) {
   button.addEventListener("click", function() {
-    switch (this.type) {
-      case "submit":
-        submitClick(this.textContent);
-        break;
-      case "reset":
-        resetClick(inputElement, form);
-        break;
-      case "button":
-        buttonClick(this.textContent, userInput);
-        break;
-      default:
-        break;
+    if (this.type === "submit") {
+      submitClick(this.textContent);
+    } else if (this.type === "reset") {
+      resetClick(inputElement, form);
+    } else if (this.type === "button") {
+      buttonClick(this.textContent, userInput);
     }
   });
 });
